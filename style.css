@@ -1,0 +1,155 @@
+body {
+    height: 100%;
+    font-family: Arial;
+    font-size: 14px;
+}
+nav {
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    top: 0;
+}
+ul.navContainer {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 100%;
+    height: 35px;
+}
+ul.navContainer > li {
+    display: inline-block;
+    float: left;
+    padding: 10px 30px 10px 30px;
+    text-align: left;
+}
+ul.navContainer li a {
+    text-decoration: none;
+    color: #000;
+}
+ul.navContainer li:hover {
+    background: #43597c;
+}
+ul.navContainer li a:hover {
+    color: #fff;
+}
+ul.navContainer .dropdown {
+    position: absolute;
+    list-style-type: none;
+    display: none;
+    background: #4d6b9b;
+    min-width: 150px;
+    margin: 10px 0 0 -30px;
+    z-index: 10;
+    padding: 10px 13px 10px 0px;
+}
+ul.navContainer ul.dropdown li {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 0 3px;
+}
+ul.navContainer li:hover .dropdown {
+    display: block;
+}
+li#search:hover {
+    background: none;
+}
+form button {
+    background: #4d6b9b;
+    color: #fff;
+}
+section#main {
+    float: left;
+    width: 800px;
+    border-right: solid 1px lightgray;
+}
+div.image {
+    display: inline-block;
+    width: 25%;
+}
+div.content {
+    display: inline-block;
+    width: 65%;
+    color: #4d6b9b;
+}
+div.content p {
+    border-top: solid 1px lightgray;
+    font-size: 15px;
+}
+div.content span.l {
+    margin: -20px 0 0 15px;
+    float: left;
+    font-size: 13px;
+}
+div.content span.r {
+    margin: -20px 0 0 20px;
+    float: right;
+    font-size: 13px;
+}
+article {
+    border-bottom: solid 1px lightgray;
+}
+aside {
+    float: right;
+    width: 30%
+}
+h1 {
+    font-size: 30px;
+    border-bottom: solid 1px lightgray;
+}
+
+/* Portrait and Landscape Mobile */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)   {
+    ul.navContainer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul.navContainer li {
+        position: relative;
+        float: none;
+        width: 100%;
+    }
+    ul.navContainer li ul {
+        position: static;
+    }
+    div.content {
+        float: none;
+        display: block;
+        width: 45%;
+    }
+    aside,
+    article,
+    .image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/* Portrait and Landscape Tablets */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    aside,
+    article,
+    .image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    aside,
+    article,
+    .image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
